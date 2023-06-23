@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,7 +34,10 @@ Route::middleware('auth')->group(function () {
 // *****************************************************************************
 Route::get('home', [HomeController::class, 'index'])->name('home');
 
-// Auth::routes();
+Route::resource('user', UserController::class);
+
+Route::get('/profile', [UserController::class, 'profile'])->name('user.profile');
+Route::post('/profile', [UserController::class, 'update_profile'])->name('user.update_profile');
 // *****************************************************************************
 
 
