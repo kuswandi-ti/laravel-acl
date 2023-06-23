@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PermissionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,15 +30,16 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+// Route::get('home', [HomeController::class, 'index'])->name('home');
+
 // *****************************************************************************
 // App
 // *****************************************************************************
-Route::get('home', [HomeController::class, 'index'])->name('home');
-
 Route::resource('user', UserController::class);
-
 Route::get('/profile', [UserController::class, 'profile'])->name('user.profile');
 Route::post('/profile', [UserController::class, 'update_profile'])->name('user.update_profile');
+
+Route::resource('permission', PermissionController::class);
 // *****************************************************************************
 
 
