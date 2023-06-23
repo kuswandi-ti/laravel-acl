@@ -33,13 +33,42 @@
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-users-cog"></i>
                         <p>
-                            Management
+                            Management Users
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
+                            <a href="{{ route('users.index') }}" class="nav-link">
+                                <i class="nav-icon fas fa-user-tie"></i>
+                                <p>Users</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-image"></i>
+                                <p>Change Profile & Photo</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-lock"></i>
+                                <p>Change Password</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>
+                            Role & Permission
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('roles.index') }}" class="nav-link">
                                 <i class="fas fa-user-tag nav-icon"></i>
                                 <p>Roles</p>
                             </a>
@@ -48,12 +77,6 @@
                             <a href="{{ route('permission.index') }}" class="nav-link">
                                 <i class="fas fa-user-shield nav-icon"></i>
                                 <p>Permissions</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="fas fa-users nav-icon"></i>
-                                <p>Users</p>
                             </a>
                         </li>
                     </ul>
@@ -71,15 +94,9 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-image"></i>
-                        <p>Change Profile & Photo</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-lock"></i>
-                        <p>Change Password</p>
+                    <a href="{{ route('products.index') }}" class="nav-link">
+                        <i class="nav-icon fas fa-wrench"></i>
+                        <p>Product</p>
                     </a>
                 </li>
                 <li class="nav-item">
