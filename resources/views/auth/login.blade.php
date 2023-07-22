@@ -22,7 +22,7 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="card card-outline card-primary">
-            <div class="card-header text-center">
+            <div class="text-center card-header">
                 <a href="/" class="h1"><b>Admin</b>LTE</a>
             </div>
             <div class="card-body">
@@ -30,9 +30,14 @@
                     <strong>Sign in to start your session</strong>
                 </p>
 
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Email : </strong>kuswandi.ti@gmail.com
+                    <strong>Password : </strong>12345678
+                </div>
+
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
-                    <div class="input-group mb-3">
+                    <div class="mb-3 input-group">
                         <input type="email" class="form-control @error('email') is-invalid @enderror" name="email"
                             id="email" placeholder="Enter email" value="{{ old('email') }}" required autofocus>
                         <div class="input-group-append">
@@ -44,7 +49,7 @@
                             <span class="invalid-feedback">{{ $message }}</span>
                         @enderror
                     </div>
-                    <div class="input-group mb-3">
+                    <div class="mb-3 input-group">
                         <input type="password" class="form-control @error('password') is-invalid @enderror"
                             name="password" id="password" placeholder="Enter password" value="{{ old('password') }}"
                             required>
@@ -58,7 +63,7 @@
                         @enderror
                     </div>
                     <div class="row">
-                        <div class="col-12 mb-3">
+                        <div class="mb-3 col-12">
                             <div class="icheck-primary">
                                 <input type="checkbox" name="remember" id="remember_me"
                                     {{ old('remember') ? 'checked' : '' }}>
@@ -69,7 +74,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 mb-3">
+                        <div class="mb-3 col-12">
                             <button type="submit" class="btn btn-primary btn-block">{{ __('Log in') }}</button>
                         </div>
                     </div>
